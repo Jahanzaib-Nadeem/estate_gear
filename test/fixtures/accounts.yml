@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  agency: one
+  expense: 1.5
+  profit: 1.5
+
+two:
+  title: MyString
+  agency: two
+  expense: 1.5
+  profit: 1.5

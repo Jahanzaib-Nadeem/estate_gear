@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180415143838) do
+ActiveRecord::Schema.define(version: 20180415191208) do
+
+  create_table "accounts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "title"
+    t.bigint "agency_id"
+    t.float "expense", limit: 24
+    t.float "profit", limit: 24
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["agency_id"], name: "index_accounts_on_agency_id"
+  end
 
   create_table "agencies", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
@@ -62,6 +72,7 @@ ActiveRecord::Schema.define(version: 20180415143838) do
     t.bigint "property_owner_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "type"
     t.index ["agency_id"], name: "index_properties_on_agency_id"
     t.index ["property_owner_id"], name: "index_properties_on_property_owner_id"
   end
@@ -108,10 +119,12 @@ ActiveRecord::Schema.define(version: 20180415143838) do
     t.integer "age"
     t.string "gender"
     t.string "cnic"
+    t.string "type"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "accounts", "agencies"
   add_foreign_key "agencies", "users"
   add_foreign_key "properties", "agencies"
   add_foreign_key "properties", "property_owners"
