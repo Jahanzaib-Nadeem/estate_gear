@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  started_at: 2018-04-15 19:38:38
+  ending_at: 2018-04-15 19:38:38
+  bill_cost: 1.5
+  advance: 1.5
+  pending_amount: 1.5
+  status: MyString
+  agency: one
+
+two:
+  started_at: 2018-04-15 19:38:38
+  ending_at: 2018-04-15 19:38:38
+  bill_cost: 1.5
+  advance: 1.5
+  pending_amount: 1.5
+  status: MyString
+  agency: two

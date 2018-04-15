@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  address1: MyString
+  address2: MyString
+  area: MyString
+  city: MyString
+  state: MyString
+  country: MyString
+  rooms: 1
+  baths: 1
+  description: MyText
+  minimum_range: 1
+  maximum_range: 1
+  availability: 2018-04-15 19:34:20
+  status: MyString
+  agency: one
+  property_owner: 
+
+two:
+  address1: MyString
+  address2: MyString
+  area: MyString
+  city: MyString
+  state: MyString
+  country: MyString
+  rooms: 1
+  baths: 1
+  description: MyText
+  minimum_range: 1
+  maximum_range: 1
+  availability: 2018-04-15 19:34:20
+  status: MyString
+  agency: two
+  property_owner: 
